@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 10 - Parte 3</title>
+</head>
+<body>
+    <h1> - Parte 3: Uso de Operadores Lógicos y Concatenación de Strings (30 minutos) </h1>
+    <p> - Declara dos variables booleanas: `esMayorDeEdad` y `tieneLicencia`. </p>
+    <p> - Usa operadores lógicos (`&&`, `||`) para determinar si una persona puede conducir.</p>
+    <p> - Crea un mensaje de bienvenida utilizando concatenación de strings y template literals. Observa las ventanas emergentes (alertas) para ver los resultados.</p>   
+
+    <script language="javascript">
+        // Declarar variables booleanas
+        let esMayorDeEdad = true; // Por ejemplo: tiene 25 años o más
+        let tieneLicencia = false; // Por ejemplo: aún no ha obtenido su licencia de conducir
+
+        // Usar operadores lógicos para determinar si puede conducir
+        let puedeConducir = esMayorDeEdad && tieneLicencia;
+        let mensajeConducir = "¿Puede conducir?: " + puedeConducir;
+
+        // Mostrar resultado de la evaluación en una alerta
+        alert(mensajeConducir);
+
+        // Usar operador lógico || para dar recomendaciones
+        let necesitaLicencia = !tieneLicencia || !esMayorDeEdad;
+        let mensajeRecomendacion = "¿Necesita licencia o cumplir la mayoría de edad?: " + necesitaLicencia;
+
+        // Mostrar la recomendación
+        alert(mensajeRecomendacion);
+
+        // Concatenación de strings clásica
+        let nombre = "Esteban";
+        let apellido = "Diaz";
+        let mensajeClasico = "Bienvenido, " + nombre + " " + apellido + "!";
+
+        // Mostrar mensaje de bienvenida con concatenación clásica
+        alert(mensajeClasico);
+
+        // Concatenación usando template literals
+        let mensajeTemplateLiteral = `Hola ${nombre} ${apellido}, ¡es un gusto tenerte aquí!`;
+
+        // Mostrar mensaje de bienvenida con template literals
+        alert(mensajeTemplateLiteral);
+    </script>
+</body>
+</html>

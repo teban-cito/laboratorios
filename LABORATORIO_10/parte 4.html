@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 10 - Ejercicio while, if y prompt</title>
+</head>
+<body>
+    <h1>Operadores Lógicos, Edad y Licencia</h1>
+    <p>Interactúa con las ventanas emergentes para ingresar datos y ver los resultados.</p>
+
+    <script language="javascript">
+        let nombre = "";
+        let edad = 0;
+        let tieneLicencia = false;
+
+        // Solicitar al usuario su nombre y verificar que no esté vacío
+        while (!nombre) {
+            nombre = prompt("Por favor, ingresa tu nombre:");
+            if (!nombre) {
+                alert("El nombre no puede estar vacío. Inténtalo de nuevo.");
+            }
+        }
+
+        // Solicitar al usuario su edad y verificar que sea un número válido
+        while (true) {
+            let inputEdad = prompt("¿Cuál es tu edad?");
+            edad = parseInt(inputEdad);
+            if (!isNaN(edad) && edad > 0) {
+                break;
+                } else {
+                    alert("Por favor, ingresa un número válido para tu edad.");
+            }
+        }
+
+        // Verificar si el usuario es mayor de edad
+        let esMayorDeEdad = edad >= 18;
+
+        // Solicitar si tiene licencia de conducir solo si es mayor de edad
+        if (esMayorDeEdad) {
+            while (true) {
+                let respuesta = prompt("¿Tienes licencia de conducir? (sí/no):").toLowerCase();
+                if (respuesta === "sí" || respuesta === "si") {
+                    tieneLicencia = true;
+                    break;
+                    } else if (respuesta === "no") {
+                        tieneLicencia = false;
+                        break;
+                        } else {
+                            alert("Por favor, responde con 'sí' o 'no'.");
+                    }
+            }
+        } else {
+            alert("No puedes tener licencia de conducir porque eres menor de edad.");
+        }
+
+        // Evaluar si puede conducir
+        let puedeConducir = esMayorDeEdad && tieneLicencia;
+
+        // Mensajes personalizados
+        let mensajeBienvenida = `Hola ${nombre}, es un gusto tenerte aquí.`;
+        let mensajeConducir = puedeConducir
+            ? `¡${nombre}, puedes conducir!`
+            : `Lo siento, ${nombre}, no puedes conducir.`;
+
+        // Mostrar resultados
+        alert(mensajeBienvenida);
+        alert(mensajeConducir);
+    </script>
+</body>
+</html>
