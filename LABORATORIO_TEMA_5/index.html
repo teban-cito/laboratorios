@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Sitio Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido a Mi Primer Sitio Web</h1>
+        <h2>Un poco sobre mí</h2>
+        <p>Hola, soy Esteban. Este es mi primer intento de crear una página web y estoy emocionado de compartirlo contigo.</p>
+    </header>
+    <section>
+        <img src="src/esteban.jpg" alt="Foto personal" width="300">
+        <p>Conéctate conmigo en mis redes sociales:</p>
+        <ul>
+            <li><a href="https://www.tiktok.com/@teba.cito" target="_blank">TikTok</a></li>
+            <li><a href="https://www.facebook.com/teba.cito/" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/teba.cito/" target="_blank">Instagram</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Mis Hobbies</h2>
+        <ul>
+            <li>Leer</li>
+            <li>Programar</li>
+            <li>Viajar</li>
+            <li>Estudiar</li>
+        </ul>
+
+        <h2>Mis Prioridades</h2>
+        <ol>
+            <li>Mejorar programacion</li>
+            <li>Dominar idiomas extranjeros</li>
+            <li>Implementar rutinas academicas</li>
+            <li>Administracion de emprendimientos</li>
+        </ol>
+        <h2>Mi Horario Semanal</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Actividad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>Estudio de HTML</td>
+                    <td>BootCamp TalentoTech</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>Práctica con CSS</td>
+                    <td>BootCamp TalentoTech</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>Proyectos con JavaScript</td>
+                    <td>BootCamp TalentoTech</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>Estudio GitHub</td>
+                    <td>BootCamp TalentoTech</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>Bases de datos SQL y NoSql</td>
+                    <td>BootCamp TalentoTech</td>
+                </tr>
+                <tr>
+                    <td>Sabado</td>
+                    <td>Ingles tecnico</td>
+                    <td>Poder</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>Contáctame</h2>
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="reason">Motivo de Contacto:</label>
+            <input type="text" id="reason" name="reason" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
